@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueScrollReveal from 'vue-scroll-reveal';
+import FontAwesomeIcon from 'vue-fontawesome';
 
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 

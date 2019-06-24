@@ -6,6 +6,7 @@
                 <p id="one">{{service.title}}</p>
                 <p id ="two">{{service.second}}</p>
                 <p id="description"> {{service.description}}</p>
+                <font-awesome-icon :icon = service.icon />
             </div>
         </div>
     </div> 
@@ -17,7 +18,7 @@ export default {
     data: function() {
         return{
             services: [
-                {title: "Organic", second:"SEO", description: "Generate traffic to your site with organic search results. Increase traffic, increase revenue."},
+                {title: "Organic", second:"SEO", description: "Generate traffic to your site with organic search results. Increase traffic, increase revenue.", icon: 'fa-google'},
                 {title: "Affordable", second:"Hosting", description: "Bring hosting costs down with reliable hosting infrastructure. Reduce Downtime and keep your site up for every eye to see."},
                 {title: "Reliable", second:"Sevice", description: "Call or email us anytime for any need. We actively monitor your site to ensure your customers satisfaction."},
                 {title: "Custom", second:"Design", description: "By using our designers and web developers, beat the competition by having a unique and updated website."},
@@ -53,7 +54,7 @@ export default {
 
 .serv-list {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 100%;
     grid-row-gap: 2rem;
     width: 95%;
     margin: 0 auto;
@@ -74,7 +75,7 @@ h1 {
 .item {
     display: grid;
     grid-template-rows: auto auto 50%;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto 55%;
     padding-bottom:1rem;
     margin-bottom:1rem;
     border-bottom:1px solid gray;
@@ -95,14 +96,20 @@ p#two {
     margin: 0;
     grid-row-start: 2;
     grid-column-start: 2;
-    justify-self:baseline;
+    grid-column-end: 3;
+    justify-self: flex-end;
 }
 
 p#description {
-    grid-row-start: 3;
-    grid-column-end: 3;
-    grid-column-start: 1;
-    padding-top: 2rem;
-    text-align: right;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    width: 50%;
+    text-align: left;
+    align-self: center;
+    justify-self: baseline;
+    color: lightgray;
+    font-size: 1.2rem;
+    padding-left: 5rem;
 }
 </style>
