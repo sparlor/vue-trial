@@ -43,6 +43,7 @@ export default {
     border:none;
     font-family: 'Raleway', sans-serif;
     color:#a800fc;
+    font-size:1.5rem;
 
 }
 

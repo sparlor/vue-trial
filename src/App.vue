@@ -2,6 +2,7 @@
   <div id="app">
     <navigation />
     <Welcome />
+    <Product />
     <Services />
   </div>
 </template>
@@ -12,12 +13,14 @@
 import navigation from './components/navigation.vue'
 import Welcome from './components/Welcome.vue'
 import Services from './components/Services'
+import Product from './components/Product';
 
 export default {
   name: 'app',
   components: {
     navigation,
     Welcome,
+    Product,
     Services
   }
 }

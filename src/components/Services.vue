@@ -1,12 +1,11 @@
 <template>
     <div class = "services">
-        <h1 v-scroll-reveal.reset>Take your Business to the Next Level.</h1>
+        <h1 v-scroll-reveal>Take your Business to the Next Level.</h1>
         <div class= "serv-list">
-            <div class ="item" v-for="service in services" v-bind:key="service.index" v-scroll-reveal.reset>
+            <div class ="item" v-for="service in services" v-bind:key="service.index" v-scroll-reveal>
                 <p id="one">{{service.title}}</p>
                 <p id ="two">{{service.second}}</p>
                 <p id="description"> {{service.description}}</p>
-                <font-awesome-icon :icon = service.icon />
             </div>
         </div>
     </div> 
@@ -18,7 +17,7 @@ export default {
     data: function() {
         return{
             services: [
-                {title: "Organic", second:"SEO", description: "Generate traffic to your site with organic search results. Increase traffic, increase revenue.", icon: 'fa-google'},
+                {title: "Organic", second:"SEO", description: "Generate traffic to your site with organic search results. Increase traffic, increase revenue."},
                 {title: "Affordable", second:"Hosting", description: "Bring hosting costs down with reliable hosting infrastructure. Reduce Downtime and keep your site up for every eye to see."},
                 {title: "Reliable", second:"Sevice", description: "Call or email us anytime for any need. We actively monitor your site to ensure your customers satisfaction."},
                 {title: "Custom", second:"Design", description: "By using our designers and web developers, beat the competition by having a unique and updated website."},
@@ -78,7 +77,7 @@ h1 {
     grid-template-columns: auto auto 55%;
     padding-bottom:1rem;
     margin-bottom:1rem;
-    border-bottom:1px solid gray;
+    /* border-bottom:1px solid gray; */
 
 }
 
